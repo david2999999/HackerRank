@@ -23,10 +23,10 @@ public class Solution {
         System.out.println(sum);
         
         // Yes if A is lexicographically larger than B or No if it is not. 
-        if (A.compareTo(B) < 0) {
-            System.out.println("No");
-        } else{
+        if (A.compareTo(B) > 0) {
             System.out.println("Yes");
+        } else{
+            System.out.println("No");
         } 
 
         // uppercase the first letter in the string
