@@ -29,8 +29,6 @@ public class Solution {
         smallest = arr.get(0);
         largest = arr.get(arr.size() - 1);
          
-
-        
         return smallest + "\n" + largest;
     }
 
