@@ -28,3 +28,15 @@ Thoughts Before Coding
         - As we move downward
             - We will decrement the number of zeros and increment the number of '#'
         - When the number of '#' reaches 'n', we will stop the iteration
+
+Answer
+    - Iterate through the indices from 1 -> n, denoted as 'i'
+        - Create a StringBuilder 'pound' to keep track of all the '#'
+        - Iterate through from 0 -> 'i - 1'
+            - Append '#' to 'pound'
+        - Using String.format() to prepend spaces in front of our string 'pound'
+            - We want our string to take up exactly n spaces
+            - Any extra space will be prepended
+        - Print the formatted string
+        - If 'i' is not equal to 'n'
+            - print a new line
