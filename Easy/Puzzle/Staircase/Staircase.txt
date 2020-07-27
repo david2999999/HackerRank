@@ -40,3 +40,9 @@ Answer
         - Print the formatted string
         - If 'i' is not equal to 'n'
             - print a new line
+
+What is the Time and Space Complexity?
+    - Time Complexity = O((n^2) / 2) = O(n^2), where n is the input number
+        - O((n^2) / 2), printing out the stairs
+    - Space Complexity = O((n^2) / 2), where n is the input number
+        - O((n^2) / 2), half of the stairs is '#'
