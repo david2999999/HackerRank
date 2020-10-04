@@ -1,0 +1,13 @@
+Question
+    In this challenge, you will be given an array B and must determine an array A.
+    There is a special rule: For all i, A[i] <= B[i]. That is, A[i] can be any number you choose such that 1 <= A[i] <= B[i].
+    Your task is to select a series of A[i] given B[i]such that the sum of the absolute difference of consecutive pairs of A is maximized.
+    This will be the array's cost, and will be represented by the variable S below.
+
+Thoughts Before Coding
+    - The recursive approach is inefficient due to overlapping recursive calls
+        - We can avoid overlapping recursive calls using memoization
+    - What do we need to cache?
+        - In each of the recursive call
+            - We are trying to find the 'maxSum' at each 'i, prev'
+            - This means we can cache 'i,prev' with 'maxSum'
