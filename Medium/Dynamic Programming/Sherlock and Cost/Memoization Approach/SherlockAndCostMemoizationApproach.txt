@@ -11,3 +11,36 @@ Thoughts Before Coding
         - In each of the recursive call
             - We are trying to find the 'maxSum' at each 'i, prev'
             - This means we can cache 'i,prev' with 'maxSum'
+
+Answer
+    - We will perform 2 recursive calls
+        - The first recursive call we will pick '1' for the number at index '0' inside 'A'
+        - The second recursive call we will pick 'B[i]' for the number at index '0' inside 'A'
+        - We will return the recursive call with a higher result
+    - Create a 2D matrix 'memo' to cache previously calculated results
+        - fill 'memo' with -1
+    - Implement the top down memoization approach
+        - What parameters do we need?
+            - i, the current index we are populating
+            - prev, variable to indicate if we pick 1 or 'B[i - 1]' for the previous index
+                - 0 = 1
+                - 1 = B[i - 1]
+            - B, the input array
+            - memo, cache
+        - What is the base case?
+            - if 'i' is out of bound
+                - return 0
+            - If 'memo[i][prev]' is not equal to -1
+                - return 'memo[i][prev]'
+        - In each of the recursive call
+            - Recursively find the 'sum1' if we pick 1
+                - i => i + 1
+                - prev => 0
+                - Increment 'sum1' by 'abs(1 - (prev == 0 ? 1 : B[i - 1]))'
+            - Recursively find the 'sum2' if we pick 'B[i]'
+                - i => i + 1
+                - prev => 1
+                - Increment 'sum2' by 'abs(B[i] - (prev == 0 ? 1 : B[i - 1]))'
+            - Put 'max(sum1, sum2)' at 'memo[i][prev]'
+            - Return 'memo[i][prev]'
+    - This solution is not efficient enough and will result in "TLE" error
