@@ -1,0 +1,17 @@
+Question
+    You are working at the cash counter at a fun-fair, and you have different types of coins available to you in infinite quantities. The value of each coin is already given.
+    Can you determine the number of ways of making change for a particular number of units using the given types of coins?
+
+    Function Description
+        Complete the getWays function in the editor below. It must return an integer denoting the number of ways to make change.
+
+        getWays has the following parameter(s):
+            - n: an integer, the amount to make change for
+            - c: an array of integers representing available denominations
+
+Thoughts Before Coding
+    - Lets convert the top down memoization approach to a bottom up approach
+        - Where do we start?
+            - In the memoization approach
+                - We have cached 'i,n' with 'ways'
+            - This means we can create a 2D matrix 'ways' to keep track of the ways for all combination of 'i, n'
