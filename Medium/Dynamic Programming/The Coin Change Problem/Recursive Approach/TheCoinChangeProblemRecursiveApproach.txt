@@ -39,3 +39,9 @@ Answer
                 - i => i + 1
             - Return 'ways1 + ways2'
     - This solution is not efficient enough and will result in "TLE" error
+
+What is the Time and Space Complexity?
+    - Time Complexity = O(2^max(m, n / k)), where m is the number of different coins, n is the amount, and k is the smallest denominator
+        - O(2^max(m, n / k)), each recursive call has up to 2 choices and a depth of 'max(m, n / k)'
+    - Space Complexity = O(max(m, n / k)), where m is the number of different coins, n is the amount, and k is the smallest denominator
+        - O(max(m, n / k)), recursive call stack memory
