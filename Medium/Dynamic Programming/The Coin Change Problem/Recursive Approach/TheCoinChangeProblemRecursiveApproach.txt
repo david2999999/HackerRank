@@ -39,3 +39,4 @@ Answer
                 - i => i + 1
             - Return 'ways1 + ways2'
     - This solution is not efficient enough and will result in "TLE" error
+
