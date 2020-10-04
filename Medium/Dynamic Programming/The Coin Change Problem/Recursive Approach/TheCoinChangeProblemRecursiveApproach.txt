@@ -1,0 +1,18 @@
+Question
+    You are working at the cash counter at a fun-fair, and you have different types of coins available to you in infinite quantities. The value of each coin is already given.
+    Can you determine the number of ways of making change for a particular number of units using the given types of coins?
+
+    Function Description
+        Complete the getWays function in the editor below. It must return an integer denoting the number of ways to make change.
+
+        getWays has the following parameter(s):
+            - n: an integer, the amount to make change for
+            - c: an array of integers representing available denominations
+
+Thoughts Before Coding
+    - We will first implement the recursive approach
+        - In each of the recursive call
+            - We will have up to 'k' choices, where k is the number of different coins
+            - We can use a coin if it is smaller than or equal to current target amount
+        - When the target amount reaches 0
+            - We have found 1 way
