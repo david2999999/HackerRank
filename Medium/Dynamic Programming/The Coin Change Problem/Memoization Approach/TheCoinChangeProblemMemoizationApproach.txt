@@ -44,3 +44,11 @@ Answer
                 - i => i + 1
             - Put 'ways1 + ways2' at 'memo[i][n]'
             - Return 'memo[i][n]'
+
+What is the Time and Space Complexity?
+    - Time Complexity = O(m * n) + O(m * n) = O(m * n), where m is the number of different coins, and n is the amount
+        - O(m * n), filling 'memo' with -1
+        - O(m * n), all combination of 'i' and 'n'
+    - Space Complexity = O(max(m, n / k)) + O(m * n) = O(m * n), where m is the number of different coins, n is the amount, and k is the smallest denominator
+        - O(max(m, n / k)), recursive call stack memory
+        - O(m * n), memo
