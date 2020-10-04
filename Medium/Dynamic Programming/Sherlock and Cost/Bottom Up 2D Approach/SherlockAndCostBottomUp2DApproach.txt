@@ -1,0 +1,12 @@
+Question
+    In this challenge, you will be given an array B and must determine an array A.
+    There is a special rule: For all i, A[i] <= B[i]. That is, A[i] can be any number you choose such that 1 <= A[i] <= B[i].
+    Your task is to select a series of A[i] given B[i]such that the sum of the absolute difference of consecutive pairs of A is maximized.
+    This will be the array's cost, and will be represented by the variable S below.
+
+Thoughts Before Coding
+    - Lets convert the top down memoization approach to a bottom up approach
+        - Where do we start?
+            - In the memoization approach
+                - We have cached 'i,prev' with 'maxSum'
+                - This means we can create a 2D matrix 'maxSum' to keep track of the maximum sum of the absolute differences in each 'i, prev'
