@@ -38,3 +38,9 @@ Answer
                 - Increment 'sum2' by 'abs(B[i] - (prev == 0 ? 1 : B[i - 1]))'
             - Return 'max(sum1, sum2)'
     - This solution is not efficient enough and will result in "TLE" error
+
+What is the Time and Space Complexity?
+    - Time Complexity = O(2 * 2^n) = O(2^n), where n is the length of the input array
+        - O(2 * 2^n), 2 recursive calls, in each recursive call, we have up to 2 choices and a depth of n
+    - Space Complexity = O(n), where n is the length of the input array
+        - O(n), recursive call stack memory
