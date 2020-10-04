@@ -27,3 +27,9 @@ Answer
                 - continue to next iteration
             - Increment 'ways[curN]' by 'ways[curN - c.get(i)]
     - Return 'ways[n]'
+
+What is the Time and Space Complexity?
+    - Time Complexity = O(m * n), where m is the number of different coins, and n is the amount
+        - O(m * n), all combination of 'i' and 'curN'
+    - Space Complexity = O(n), where n is the amount
+        - O(m * n), ways array
