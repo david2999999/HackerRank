@@ -16,3 +16,31 @@ Thoughts Before Coding
         - In each of the recursive calls
             - We are trying to find the number of 'ways' at each 'i, n'
             - This means we can cache 'i, n' with 'ways'
+
+Answer
+    - Create a 2D matrix 'memo' to cache previously calculated results
+        - fill 'memo' with -1
+    - Implement the top down memoization approach
+        - What parameters do we need?
+            - n, the current target amount
+            - i, the current coin we are at
+            - c, the input list of coins
+            - memo, cache
+        - What is the base case?
+            - If 'n' is equal to 0
+                - return 1
+            - If 'i' is out of bound
+                - return 0
+            - If 'c[i]' is greater than 'n'
+                - return the recursive result of moving to the next coin
+                    - i => i + 1
+            - If 'memo[i][n]' is not equal to -1
+                - return 'memo[i][n]'
+        - In each of the recursive call
+            - Recursively find the number of 'ways1' of including this coin
+                - i => i
+                - amount => amount - coin[i]
+            - Recursively find the number of 'ways2' of not including this coin
+                - i => i + 1
+            - Put 'ways1 + ways2' at 'memo[i][n]'
+            - Return 'memo[i][n]'
