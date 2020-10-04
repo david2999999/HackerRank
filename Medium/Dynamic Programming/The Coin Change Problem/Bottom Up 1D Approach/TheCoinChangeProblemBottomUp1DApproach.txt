@@ -15,3 +15,15 @@ Thoughts Before Coding
         - This means we can create an array to represent our 'ways' matrix
             - In each of the iteration
                 - We will be replacing values from the row below
+
+Answer
+    - Create an array 'ways'
+    - Iterate through the indices of 'c', denoted as 'i'
+        - Iterate through the amount from 0 -> n, denoted as 'curN'
+            - If 'curN' is equal to 0
+                - Place 1 at 'ways[curN]'
+                - continue to next iteration
+            - If 'c.get(i)' is greater than 'curN'
+                - continue to next iteration
+            - Increment 'ways[curN]' by 'ways[curN - c.get(i)]
+    - Return 'ways[n]'
