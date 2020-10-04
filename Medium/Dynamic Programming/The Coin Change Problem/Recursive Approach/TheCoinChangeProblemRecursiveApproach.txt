@@ -16,3 +16,21 @@ Thoughts Before Coding
             - We can use a coin if it is smaller than or equal to current target amount
         - When the target amount reaches 0
             - We have found 1 way
+
+Answer
+    - Implement the recursive approach
+        - What parameters do we need?
+            - n, the current target amount
+            - c, the input list of coins
+        - What is the base case?
+            - If 'n' is equal to 0
+                - return 1
+        - In each of the recursive call
+            - Create a variable 'ways'
+            - Iterate through the coins inside 'c', denoted as 'coin'
+                - If 'coin' is greater than 'n'
+                    - continue to next iteration
+                - Recursively find the number of ways if we use this coin
+                    - n => n - coin
+                - Increment 'ways' by the recursive result
+            - Return 'ways'
