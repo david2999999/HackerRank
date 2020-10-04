@@ -11,3 +11,30 @@ Thoughts Before Coding
                 - We can either pick 1 or 'B[i]'
                     - We should not be picking any other value because it will not give us the maximum absolute difference
                 - We will pick the choice that will give us the highest absolute difference
+
+Answer
+    - We will perform 2 recursive calls
+        - The first recursive call we will pick '1' for the number at index '0' inside 'A'
+        - The second recursive call we will pick 'B[i]' for the number at index '0' inside 'A'
+        - We will return the recursive call with a higher result
+    - Implement the recursive approach
+        - What parameters do we need?
+            - i, the current index we are populating
+            - prev, variable to indicate if we pick 1 or 'B[i - 1]' for the previous index
+                - 0 = 1
+                - 1 = B[i - 1]
+            - B, the input array
+        - What is the base case?
+            - if 'i' is out of bound
+                - return 0
+        - In each of the recursive call
+            - Recursively find the 'sum1' if we pick 1
+                - i => i + 1
+                - prev => 0
+                - Increment 'sum1' by 'abs(1 - (prev == 0 ? 1 : B[i - 1]))'
+            - Recursively find the 'sum2' if we pick 'B[i]'
+                - i => i + 1
+                - prev => 1
+                - Increment 'sum2' by 'abs(B[i] - (prev == 0 ? 1 : B[i - 1]))'
+            - Return 'max(sum1, sum2)'
+    - This solution is not efficient enough and will result in "TLE" error
