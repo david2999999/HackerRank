@@ -20,3 +20,9 @@ Answer
                 - maxSum[i + 1][1] + abs(B[i] - (prev == 0 ? 1 : B[i - 1]))
             - at 'maxSum[i][prev]'
     - Return 'max(maxSum[1][0], maxSum[1][1])'
+
+What is the Time and Space Complexity?
+    - Time Complexity = O(n * 2) = O(n), where n is the length of the input array
+        - O(n * 2), all combination of 'i' and 'prev'
+    - Space Complexity = O(n * 2) = O(n), where n is the length of the input array
+        - O(n * 2), max sum matrix

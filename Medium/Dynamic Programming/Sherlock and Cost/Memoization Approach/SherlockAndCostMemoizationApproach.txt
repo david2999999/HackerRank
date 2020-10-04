@@ -46,7 +46,7 @@ Answer
     - This solution is not efficient enough and will result in "TLE" error
 
 What is the Time and Space Complexity?
-    - Time Complexity = O(2 * n*2) = O(n * 2), where n is the length of the input array
+    - Time Complexity = O(2 * n*2) = O(n), where n is the length of the input array
         - O(2 * n*2), 2 recursive calls, all combination of 'i' and 'prev'
     - Space Complexity = O(n) + O(n * 2) = O(n), where n is the length of the input array
         - O(n), recursive call stack memory
